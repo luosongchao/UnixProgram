@@ -1,0 +1,15 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5	//
+BUFLENGTH	IOStream.c	11;"	d	file:
+Check	IOStream.c	/^int Check(int argc,char *argv[])$/;"	f
+CloseFile	IOStream.c	/^int CloseFile(FILE *file)$/;"	f
+GetSpace	IOStream.c	/^void *GetSpace(const int length)$/;"	f
+OpenFile	IOStream.c	/^FILE *OpenFile(const char *filepath,const char *type)$/;"	f
+RW	IOStream.c	13;"	d	file:
+RWA	IOStream.c	14;"	d	file:
+Read	IOStream.c	/^char *Read(FILE *file,const int length)$/;"	f
+main	IOStream.c	/^int main(int argc,char *argv[])$/;"	f
