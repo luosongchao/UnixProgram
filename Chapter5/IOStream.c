@@ -31,6 +31,11 @@ int main(int argc,char *argv[])
 	buf = Read(file,length);
 	printf("read string://%s\n",buf);
 
+	char *data="hello world!\n";
+	if(Write(file,data) == EOF)
+	{
+		printf("write error!\n");
+	}	
 	CloseFile(file);
 }
 
@@ -93,6 +98,17 @@ char *Read(FILE *file,const int length)
 		exit(0);
 	}
 	return buf;
+}
+
+int Write(FILE *file,char *data)
+{
+	int result=fputs(data,file);
+	if(result == EOF)
+	{
+		printf("write error!");
+	}
+	
+	return result;
 }
 
 //说明：关闭文件流
