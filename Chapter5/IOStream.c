@@ -100,6 +100,9 @@ char *Read(FILE *file,const int length)
 	return buf;
 }
 
+//说明：将指定字符串写入文件
+//输入：文件流，写入字符串
+//输出：写入成功或者失败标志
 int Write(FILE *file,char *data)
 {
 	int result=fputs(data,file);
