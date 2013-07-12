@@ -29,7 +29,11 @@ int main(int argc,char *argv[])
 	{
 		global++;
 		count++;	
-		printf("in child process,global = %d ,count = %d\n",global,count);	
+		printf("in child process,global = %d ,count = %d\n",global,count);
+
+		//vfork保证子进程先运行，在子进程调用exec或exit之后父进程才能够被调度运行。
+		//在子进程调用exec或exit之前，内核会使父进程处于休眠状态。
+		//_exit()不同于exit()，_exit()并不执行标准I/O缓冲的冲洗操作，如果通过exit程序的输出是不确定的。	
 		_exit(0);
 	}
 	//父进程返回子进程PID

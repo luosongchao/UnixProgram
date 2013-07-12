@@ -1,0 +1,9 @@
+#如下所示是vfork.c 程序执行的结果，分析执行结果：
+#子进程在父进程的空间中运行。因此如下的结果
+#子进程中执行的global++和count++操作，对父进程的global和count输出结果是有影响的
+#根本原因在于vfork和fork之间的差异，vfork在父进程空间中执行，fork完全复制父进程的地址空间
+
+before vfork ,global = 11 , count = 3
+in child process,global = 12 ,count = 4
+child process id = 10540
+global = 12, count = 4,current process pid = 10539
