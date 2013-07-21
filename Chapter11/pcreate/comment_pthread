@@ -1,0 +1,10 @@
+说明：
+	pthread库不是linux系统默认的库，链接时需要使用静态库libpthread.a 因此在使用
+pthrea_create（）创建线程，以及调用pthread_atfork()建立fork处理程序时，需要链接该库
+
+
+问题解决：
+	编译pthread.c文件时，正确的编译方式时
+	cc pthread.c -lpthread 
+	其中-lpthread是链接libpthread.a库
+
