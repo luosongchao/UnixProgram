@@ -1,0 +1,5 @@
+进程通信（IPC——-InterProcess  Communication）
+	（1）同一台PC之间的各个进程之间的通信，包括管道、FIFO、消息队列、信号
+	量以及共享存储区
+
+	（2）不同主机各个进程之间的IPC，包括套接字、STREAMES
